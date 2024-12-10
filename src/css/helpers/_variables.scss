@@ -1,0 +1,47 @@
+// Variables para modo claro
+$background-color-light: hsl(0, 0%, 98%);
+$elements-color-light: hsl(0, 0%, 100%);
+$text-color-light: hsl(200, 15%, 8%);
+$input-background-light: hsl(0, 0%, 52%);
+$box-shadow-light: 0.5px 0.5px 5px hsla(0, 0%, 52%, 0.2);
+
+// Variables para modo oscuro
+$background-color-dark: hsl(207, 26%, 17%);
+$elements-color-dark: hsl(209, 23%, 22%);
+$text-color-dark: hsl(0, 0%, 100%);
+$input-background-dark: hsl(0, 0%, 10%);
+$box-shadow-dark: none;
+
+// Variables de CSS personalizadas
+:root {
+  --primary-color-light: #{$background-color-light};
+  --secondary-color-light: #{$elements-color-light};
+  --text-color-light: #{$text-color-light};
+  --input-background-light: #{$input-background-light};
+  --box-shadow-light: #{$box-shadow-light};
+
+  --primary-color-dark: #{$background-color-dark};
+  --secondary-color-dark: #{$elements-color-dark};
+  --text-color-dark: #{$text-color-dark};
+  --input-background-dark: #{$input-background-dark};
+  --box-shadow-dark: #{$box-shadow-dark};
+
+  // Variables por defecto
+  --primary-color: var(--primary-color-light);
+  --secondary-color: var(--secondary-color-light);
+  --text-color: var(--text-color-light);
+  --input-background: var(--input-background-light);
+  --box-shadow: var(--box-shadow-light);
+}
+
+// Aplicar las variables en modo oscuro automáticamente si el sistema está en modo oscuro
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: var(--primary-color-dark);
+    --secondary-color: var(--secondary-color-dark);
+    --text-color: var(--text-color-dark);
+    --input-background: var(--input-background-dark);
+    --box-shadow: var(--box-shadow-dark);
+  }
+}
+
