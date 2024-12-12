@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import Header from "./header";
+import Header from "./Header";
 
 const DetailPage = ({ allData }) => {
   const { id } = useParams();
