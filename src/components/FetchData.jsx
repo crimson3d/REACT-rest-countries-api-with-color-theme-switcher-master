@@ -25,7 +25,7 @@ const FetchData = ({ onFetchComplete }) => {
   }
 
   if (error) {
-    return <div className="fetching__error">{error}</div>;
+    return <div className="errors__errorMessage">{error}</div>;
   }
 
   return null; // No renderiza nada porque solo se encarga de la lógica de fetch
