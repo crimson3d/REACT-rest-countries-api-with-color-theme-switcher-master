@@ -4,7 +4,7 @@ import InputSearch from "./components/InputSearch.jsx";
 import MenuContinent from "./components/MenuContinent.jsx";
 import FetchData from "./components/FetchData.jsx";
 import DataResults from "./components/DataResults.jsx";
-import Header from "./components/header.jsx";
+import Header from "./components/Header.jsx";
 import DetailPage from "./components/DetailPage.jsx";
 import { ThemeProvider } from "./components/ThemeContext.jsx";
 
