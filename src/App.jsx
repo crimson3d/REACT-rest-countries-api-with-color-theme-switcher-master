@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import InputSearch from "./components/InputSearch.jsx";
 import MenuContinent from "./components/MenuContinent.jsx";
