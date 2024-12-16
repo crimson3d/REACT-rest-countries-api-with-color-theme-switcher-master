@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import Header from "./Header";
+import { Helmet } from "react-helmet-async";
 
 const DetailPage = ({ allData }) => {
   const { id } = useParams();
@@ -33,6 +34,22 @@ const DetailPage = ({ allData }) => {
 
   return (
     <div className="root__content">
+      <Helmet>
+        <title>{country.name.common} - Details</title>
+        <meta
+          name="description"
+          content={`Detailed information about ${country.name.common}`}
+        />{" "}
+        <meta
+          property="og:title"
+          content={`${country.name.common} - Details`}
+        />{" "}
+        <meta
+          property="og:description"
+          content={`Detailed information about ${country.name.common}`}
+        />{" "}
+        <meta property="og:type" content="website" />
+      </Helmet>
       <Header />
       <Link to="/" className="content__backButton">
         ← Back
