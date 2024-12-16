@@ -12,11 +12,16 @@ const InputSearch = ({ onFilter, error }) => {
     onFilter(data.name);
   };
 
+  const handleInputChange = (event) => {
+    onFilter(event.target.value);
+  };
+
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="search__form">
       <input
         type="text"
         {...register("name")}
+        onChange={handleInputChange}
         className={`form__input ${error ? "form__error" : ""}`}
         placeholder="Search for a country..."
       />
